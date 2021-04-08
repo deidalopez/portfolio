@@ -1,0 +1,57 @@
+@import './colors';
+@import "~@fontsource/montserrat/index.css";
+
+
+.contactSection {
+  // height: 10em;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;;
+
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 4em;
+  width: 20%;
+  // border: 1px solid $charcoal;
+  background-color: $blue;
+  padding: 2.5em;
+  border-radius: 1em;
+}
+
+.formInput {
+  margin-bottom: 1em;
+  border-radius: 1em;
+  border:none;
+  padding: 1em;
+}
+
+.textarea {
+  border:none;
+  height: 3em;
+  padding: 2em;
+  border-radius: 1em;
+  margin-bottom: 2.5em;
+}
+
+.submitButton {
+  width: 7em;
+  padding: 1.5em;
+  background-color: $salmon;
+  font-family: "Montserrat";
+  color: $white;
+  border-radius: 1em;
+  border: none;
+  font-weight: 700;
+  box-shadow: 1px 1px 3px $charcoal;
+}
+
+.submitButton:hover {
+  cursor: pointer;
+  transition: 200ms;
+  box-shadow: 3px 3px 1.5px $charcoal;
+}
