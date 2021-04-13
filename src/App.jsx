@@ -78,10 +78,7 @@ function App() {
         </div>
         <div className="hero">
           <img src={deidalopez} id="myName" alt="logo" />
-          {/* <button className="submitButton">
-            LET'S GO
-          </button> */}
-          <Link
+          {/* <Link
             activeClass="active"
             to="aboutMe"
             spy={true}
@@ -104,7 +101,7 @@ function App() {
             >
               let's go
             </Button>{" "}
-          </Link>
+          </Link> */}
         </div>
       </header>
       <div title="aboutMe" className="aboutMe">
@@ -112,13 +109,13 @@ function App() {
         <div className="aboutMeSection">
           <div className="aboutMeContent">
             <p>
-              Full Stack Developer with a passion for building appealing, and
-              stable mobile and web applications. Enjoy being involved in the
+              I'm a Full Stack Developer with a passion for building appealing, and
+              stable mobile and web applications. I enjoy being involved in the
               initial conceptualization of an app, and following through until
               development, and delivery.
             </p>
             <p>
-              Experienced in working in a team setting following Agile
+            Experienced in working in a team setting following Agile
               methodology, requiring good communication, and time management
               skills.
             </p>
@@ -130,6 +127,7 @@ function App() {
           <img src={myPicture} className="myPicture" alt="logo" />
         </div>
       </div>
+      
       <h1 id="myWorkTitle">My Work</h1>
       <div title="myWork" className="myWork">
         <div className="localTrade">
@@ -202,11 +200,11 @@ function App() {
         <h1 id="contactMeTitle">Contact Me</h1>
         <ContactForm />
         <div className="socialSection">
-          <div className="socialIcon">
+          {/* <div className="socialIcon">
             <a>
               <img className="socialIcon" src={emailSocial} alt="emailSocial" />
             </a>
-          </div>
+          </div> */}
           <div className="socialIcon">
             <a href="https://www.linkedin.com/in/deidalopez/">
               <img

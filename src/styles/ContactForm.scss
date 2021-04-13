@@ -55,3 +55,37 @@
   transition: 200ms;
   box-shadow: 3px 3px 1.5px $charcoal;
 }
+
+
+@media only screen   
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3){ 
+
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 4em;
+    width: 60%;
+    // border: 1px solid $charcoal;
+    background-color: $blue;
+    padding: 2em;
+    border-radius: 1em;
+  }
+
+
+  .submitButton {
+    width: 7em;
+    padding: 1.5em;
+    background-color: $salmon;
+    font-family: "Montserrat";
+    color: $white;
+    border-radius: 1em;
+    border: none;
+    font-weight: 700;
+    box-shadow: 1px 1px 3px $charcoal;
+  }
+  }

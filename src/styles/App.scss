@@ -9,7 +9,8 @@
 
 .App-header {
   background-color: $blue;
-  min-height: 90vh;
+  padding-top: 2em;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,13 +19,6 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-li:hover {
-  cursor: pointer;
-}
 
 .navbar {
   width: 100%;
@@ -33,20 +27,20 @@ li:hover {
 #nav {
   min-height: 15vh;
   display: flex;
-  // background-color: red;
   width: 95%;
-  // background-color: $yellow;
   float: left; 
-  // margin: 0 0 3em 0; 
   margin: 0;
   margin-right: 2em;
-  // padding: .5em;
   flex-direction: row;
   justify-content: flex-end;
 }
 
 li {
   list-style-type: none;
+}
+
+li:hover {
+  cursor: pointer;
 }
 
 a {
@@ -56,10 +50,8 @@ a {
 
 .hero {
   width: 100%;
-  // padding: 1em;
-  height: 60vh;
+  height: 55vh;
   align-items: center;
-  // justify-content: right;
 }
 
 #myName {
@@ -84,7 +76,6 @@ a {
 
 .linkPNG {
   height: 2em;
-
   padding: 0;
   margin: 0;
 }
@@ -93,6 +84,7 @@ a {
   height: 100vh;
   display: flex;
   flex-wrap: wrap;
+  width: 100vw;
 }
 
 #aboutMeTitle {
@@ -106,26 +98,27 @@ a {
 }
 
 .aboutMeSection {
-  width: 100%;
+  // width: 100%;
+  height: 80%;
   display: flex;
   flex-direction: row;
   }
 
-  .aboutMeContent {
-  height: 60%;
-  width: 50%;
-  margin-bottom: 5em;
-  padding: 2em;
+.aboutMeContent {
+  height: 80%;
+  width: 60%;
+  margin-bottom: 3em;
+  padding: 1.5em;
   color: $white;
   background-color: $blue;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 
 
 .myPicture {
   height: 25em;
-  margin: 5em 14em;
+  margin: 4em 10em;
   border-radius: 50%;
 }
 
@@ -231,11 +224,10 @@ a {
 }
 
 .socialSection {
-  width: 25%;
+  width: 15%;
   margin: auto;
   margin-bottom: 0;
   display: flex;
-
   flex-direction: row;
   justify-content: space-between;
 }
@@ -243,6 +235,7 @@ a {
 .socialIcon {
   height: 3.5em;
   color: $charcoal;
+  margin: 0;
 }
 
 .socialIcon:hover {
@@ -254,6 +247,169 @@ a {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+@media only screen   
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3){
+
+  .Container {
+    width: 100vw;
+    padding: 0;
+  }
+
+  #nav {
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 0;
+  }
+
+  .App-header {
+    height: 50vh;
+    // padding-top: 0;
+  }
+  
+
+  #myName {
+    height: 50%;
+    padding-top: 1.5em;
+    margin: auto;
+    align-items: center;
+  }
+
+  #myWorkTitle {
+    font-family: "Montserrat";
+    margin: 0;
+    padding: .5em;
+    text-align: center;
+    width: 90%;
+    // margin: auto;
+    // height:fit-content; 
+    font-size: 40px;
+    color: $white;
+  }
+
+  .localTrade {
+    height: 30%;
+  }
+
+
+  #technologyTitle {
+    font-family: "Montserrat";
+    margin: 0;
+    padding: .5em;
+    text-align: center;
+    width: 90%;
+    // margin: auto;
+    // height:fit-content; 
+    font-size: 40px;
+    color: $white;
+  }
+
+
+  #aboutMeTitle {
+    font-family: "Montserrat";
+    margin: 0;
+    padding: .5em;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    // height:fit-content; 
+    font-size: 40px;
+    color: $charcoal;
+  }
+
+  .myPicture {
+    height: 40%;
+    width:  50%;
+    margin: auto;
+    margin-bottom: 1em;
+  }
+
+
+
+.myWork {
+  // height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex: 1;
+  // align-items: center;
+  // justify-content: center;
+}
+
+.projectTitle {
+  color: $charcoal;
+  font-size: 20px;
+}
+
+.localTrade {
+  height: 50%;
+  // margin: 0;
+  margin: 1em;
+  border-radius: 20px;
+}
+
+.localTradeBorder {
+  height: 50%;
+  margin: 1em;
+  border-radius: 20px;
+  border: 1px solid $charcoal;
+}
+
+.localTradeImg{
+  height: 80%;
+}
+
+.bountifull {
+  height: 93%;
+  // margin: 0 0;
+  padding: 0 0;
+  border-radius: 60px 60px;
+}
+
+
+  .aboutMeSection {
+    // padding: 1em;
+    width: 100vw;
+    // height: 100vh;
+    flex-direction: column;
+    background-color: $blue;
+  }
+
+  .aboutMeContent {
+    height: 70vh;
+    width: 100vw;
+    color: $white;
+    background-color: $blue;
+    font-size: 18.5px;
+    padding: 0;
+    margin: auto
+  }
+
+  .logoSVG {
+    width: 70%;
+  }
+  
+  .contactMe {
+  height: 100vh;
+  background-color: $yellow;
+}
+
+  #contactMeTitle {
+    padding: 1em;
+    font-size: 45px;
+  }
+
+  .socialSection {
+    width: 50%;
+  }
+
+  .socialIcon {
+    height: 3em;
+  }
+ } 
 
 // @keyframes App-logo-spin {
 //   from {
