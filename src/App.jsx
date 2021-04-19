@@ -1,241 +1,103 @@
+import React, { useLayoutEffect, useEffect, useState, useRef } from 'react';
+
+import styled from 'styled-components';
+import ReactDOM from 'react-dom';
+
 import "./styles/App.scss";
 import "./styles/_colors.scss";
 import deidalopez from "./assets/deidalopez.png";
-import about from "./assets/about.png";
-import myWork from "./assets/myWork.png";
-import contactMe from "./assets/contactMe.png";
-import Button from "@material-ui/core/Button";
-import { Link, animateScroll as scroll } from "react-scroll";
-import javascript from "./assets/tech/javascript.svg";
-import css from "./assets/tech/css-3.svg";
-import html from "./assets/tech/html-5.svg";
-import github from "./assets/tech/github-icon.svg";
-import giticon from "./assets/tech/git-icon.svg";
-import reactSVG from "./assets/tech/react.svg";
-import reactNative from "./assets/tech/react-native-logo.png";
-import typescript from "./assets/tech/typescript-icon.svg";
-import nodejs from "./assets/tech/nodejs.svg";
-import express from "./assets/tech/express.svg";
-import jest from "./assets/tech/jest.svg";
-import mongoDB from "./assets/tech/mongodb.svg";
-import postgres from "./assets/tech/postgresql.svg";
-import figma from "./assets/tech/figma.svg";
-import awss3 from "./assets/tech/aws-s3.svg";
-import myPicture from "./assets/IMG_3481.jpg";
-import localTrade from "./assets/LocalTrade/Landing.png";
-import bountifull from "./assets/LocalTrade/bountifullLanding.png";
 
-import emailSocial from "./assets/iconmonstr-email-10.svg";
-import githubSocial from "./assets/iconmonstr-github-3.svg";
-import linkedinSocial from "./assets/iconmonstr-linkedin-3.svg";
-import twitterSocial from "./assets/iconmonstr-twitter-3.svg";
+import Navbar from './components/Navbar';
+import AboutMe from './components/AboutMe';
+import MyWork from './components/MyWork'
+import Tech from './components/Tech';
 import ContactForm from './components/Contact';
+import Socials from './components/Socials';
 
 function App() {
-  return (
-    <div className="Container">
-      <header className="App-header">
-        <div className="navbar">
-          <ul id="nav">
-            <li>
-              <Link
-                activeClass="active"
-                to="aboutMe"
-                spy={true}
-                smooth={true}
-                offset={-40}
-                duration={500}
-              >
-                <img src={about} className="linkPNG" alt="logo" />
-                {/* about */}
-              </Link>
-            </li>
-            <li>
-              <Link
-                activeClass="active"
-                to="myWork"
-                spy={true}
-                smooth={true}
-                offset={-40}
-                duration={500}
-              >
-                <img src={myWork} className="linkPNG" alt="logo" />
-              </Link>
-            </li>
-            <li>
-              <Link
-                activeClass="active"
-                to="contactMe"
-                spy={true}
-                smooth={true}
-                offset={-40}
-                duration={500}
-              >
-                <img src={contactMe} className="linkPNG" alt="logo" />
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className="hero">
-          <img src={deidalopez} id="myName" alt="logo" />
-          {/* <Link
-            activeClass="active"
-            to="aboutMe"
-            spy={true}
-            smooth={true}
-            offset={-40}
-            duration={500}
-          >
-            <Button
-              variant="contained"
-              style={{
-                height: "4.5em",
-                width: "10em",
-                backgroundColor: "#FF8758",
-                borderRadius: "1em",
-                boxShadow: "1px 1px 3px $charcoal",
-                color: "#fff",
-                fontWeight: "700",
-                margin: "0",
-              }}
-            >
-              let's go
-            </Button>{" "}
-          </Link> */}
-        </div>
-      </header>
-      <div title="aboutMe" className="aboutMe">
-        <h1 id="aboutMeTitle">About Me</h1>
-        <div className="aboutMeSection">
-          <div className="aboutMeContent">
-            <p>
-              I'm a Full Stack Developer with a passion for building appealing, and
-              stable mobile and web applications. I enjoy being involved in the
-              initial conceptualization of an app, and following through until
-              development, and delivery.
-            </p>
-            <p>
-            Experienced in working in a team setting following Agile
-              methodology, requiring good communication, and time management
-              skills.
-            </p>
-            <p>
-              When I am not developing, I enjoy vegetable gardening, hiking, and
-              creating new plant-based recipes.
-            </p>
-          </div>
-          <img src={myPicture} className="myPicture" alt="logo" />
-        </div>
-      </div>
-      
-      <h1 id="myWorkTitle">My Work</h1>
-      <div title="myWork" className="myWork">
-        <div className="localTrade">
-          <a href="https://github.com/deidalopez/LocalTradeApp">
-            <h2 className="projectTitle">LocalTrade</h2>
-            <img src={localTrade} alt="" className="localTrade" />
-          </a>
-        </div>
-        <div className="localTrade">
-          <a href="https://www.linkedin.com/company/bountifull-app/">
-            <h2 className="projectTitle">Bountifull</h2>
-            <img
-              className="localTradeBorder"
-              src={bountifull}
-              alt="bountifull"
-            />
-          </a>
-        </div>
-      </div>
-      <h1 id="technologyTitle">Technology</h1>
-      <div title="technology" className="technology">
-        <div className="logo">
-          <img src={javascript} className="logoSVG" alt="JSLogo" />
-        </div>
-        <div className="logo">
-          <img src={typescript} className="logoSVG" alt="TSLogo" />
-        </div>
-        <div className="logo">
-          <img src={css} className="logoSVG" alt="CSSLogo" />
-        </div>
-        <div className="logo">
-          <img src={html} className="logoSVG" alt="HTMLLogo" />
-        </div>
-        <div className="logo">
-          <img src={reactSVG} className="logoSVG" alt="ReactLogo" />
-        </div>
-        <div className="logo">
-          <img src={reactNative} className="logoSVG" alt="reactNativeLogo" />
-        </div>
-        <div className="logo">
-          <img src={giticon} className="logoSVG" alt="giticon" />
-        </div>
-        <div className="logo">
-          <img src={github} className="logoSVG" alt="github" />
-        </div>
 
-        <div className="logo">
-          <img src={nodejs} className="logoSVG" alt="nodejs" />
-        </div>
-        <div className="logo">
-          <img src={figma} className="logoSVG" alt="figma" />
-        </div>
-        <div className="logo">
-          <img src={awss3} className="logoSVG" alt="aws-s3" />
-        </div>
-        <div className="logo">
-          <img src={jest} className="logoSVG" alt="jest" />
-        </div>
-        <div className="logo">
-          <img src={mongoDB} className="logoSVGLong" alt="mongoDB" />
-        </div>
-        <div className="logo">
-          <img src={postgres} className="logoSVG" alt="postgres" />
-        </div>
-        <div className="logo">
-          <img src={express} className="logoSVGLong" alt="express" />
+  const [show, setShow] = useState({ first: false, second: false, third: false })
+
+  const firstRef = useRef(null)
+  const secondRef = useRef(null)
+  const thirdRef = useRef(null);
+
+
+  useLayoutEffect(() => {
+    const topPos = element => element.getBoundingClientRect().top;
+    const div1Pos = topPos(firstRef.current)
+    const div2Pos = topPos(secondRef.current)
+    const div3Pos = topPos(thirdRef.current);
+
+    const onScroll = () => {
+      const scrollPos = window.scrollY + window.innerHeight;
+      if (div1Pos < scrollPos) {
+        setShow(state => ({ ...state, first: true }));
+      } else if (div2Pos < scrollPos) {
+        setShow(state => ({ ...state, second: true }));
+      } else if (div3Pos < scrollPos) {
+        setShow(state => ({ ...state, third: true }))
+      }
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+
+  return (
+    <Wrapper>
+
+      <div className="Container">
+        <header className="App-header">
+          <Navbar />
+          <div className="hero">
+            <img src={deidalopez} id="myName" alt="logo" />
+          </div>
+        </header>
+        <DivLeft animate={show.third} ref={thirdRef}>
+          <h1 id="aboutMeTitle" >About Me</h1>
+        </DivLeft>
+
+        <AboutMe />
+        <DivLeft animate={show.second} ref={secondRef}>
+          <h1 id="myWorkTitle">My Work</h1>
+        </DivLeft>
+        <MyWork />
+        <Div animate={show.first} ref={firstRef}>
+          <h1 id="technologyTitle">Technology</h1>
+        </Div>
+        <Tech />
+        <div title="contactMe" className="contactMe">
+          <h1 id="contactMeTitle">Contact Me</h1>
+          <ContactForm />
+
+          <Socials />
         </div>
       </div>
-      <div title="contactMe" className="contactMe">
-        <h1 id="contactMeTitle">Contact Me</h1>
-        <ContactForm />
-        <div className="socialSection">
-          {/* <div className="socialIcon">
-            <a>
-              <img className="socialIcon" src={emailSocial} alt="emailSocial" />
-            </a>
-          </div> */}
-          <div className="socialIcon">
-            <a href="https://www.linkedin.com/in/deidalopez/">
-              <img
-                className="socialIcon"
-                src={linkedinSocial}
-                alt="linkedinSocial"
-              />
-            </a>
-          </div>
-          <div className="socialIcon">
-            <a href="https://github.com/deidalopez">
-              <img
-                className="socialIcon"
-                src={githubSocial}
-                alt="githubSocial"
-              />
-            </a>
-          </div>
-          <div className="socialIcon">
-            <a href="#">
-              <img
-                className="socialIcon"
-                src={twitterSocial}
-                alt="twitterSocial"
-              />
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+    </Wrapper>
   );
 }
 
 export default App;
+
+
+const Div = styled.div`
+  transform: translateX(${({ animate }) => (animate ? "0" : "100vw")});
+  transition: transform 1s;
+  margin: 20px;
+`;
+const DivLeft = styled.div`
+  transform: translateX(${({ animate }) => (animate ? "0" : "-110vw")});
+  transition: transform 1s;
+  margin: 20px;
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+`;
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
