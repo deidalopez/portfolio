@@ -1,4 +1,4 @@
-@import './colors';
+@import "./colors";
 @import "~@fontsource/montserrat/index.css";
 
 .Container {
@@ -19,7 +19,6 @@
   color: white;
 }
 
-
 .navbar {
   width: 100%;
 }
@@ -28,7 +27,7 @@
   min-height: 15vh;
   display: flex;
   width: 95%;
-  float: left; 
+  float: left;
   margin: 0;
   margin-right: 2em;
   flex-direction: row;
@@ -57,13 +56,13 @@ a {
 #myName {
   height: 60%;
   pointer-events: none;
-  margin-right:20em; 
+  margin-right: 20em;
   padding: 0;
 }
 
 .submitButton {
   width: 5em;
-  padding: .5em;
+  padding: 0.5em;
   background-color: $salmon;
   font-family: "Montserrat";
   color: $white;
@@ -72,7 +71,6 @@ a {
   font-weight: 700;
   box-shadow: 1px 1px 3px $charcoal;
 }
-
 
 .linkPNG {
   height: 2em;
@@ -90,7 +88,7 @@ a {
 #aboutMeTitle {
   font-family: "Montserrat";
   margin: 0;
-  padding: .5em;
+  padding: 0.5em;
   text-align: right;
   padding-right: 5em;
   font-size: 60px;
@@ -98,23 +96,20 @@ a {
 }
 
 .aboutMeSection {
-  // width: 100%;
   height: 80%;
   display: flex;
   flex-direction: row;
-  }
+}
 
 .aboutMeContent {
   height: 80%;
-  width: 60%;
+  width: 50%;
   margin-bottom: 3em;
-  padding: 1.5em;
+  padding: 1.5em 2em;
   color: $white;
   background-color: $blue;
-  font-size: 25px;
+  font-size: 27px;
 }
-
-
 
 .myPicture {
   height: 25em;
@@ -127,11 +122,12 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
+
 #myWorkTitle {
-  // width: 90vw;
   margin: 0;
   padding: 1em;
   text-align: left;
@@ -142,45 +138,24 @@ a {
 }
 
 .projectTitle {
-  color: $charcoal
+  color: $charcoal;
 }
 
 .localTrade {
   height: 85%;
-  margin: 2em;
+  flex: 1;
   border-radius: 20px;
 }
 
-.localTrade{
+.localTrade {
   height: 50vh;
 }
 
 .localTradeBorder {
-    height: 85%;
-  margin: 2em;
+  height: 100%;
   border-radius: 20px;
-  border: 1px solid $charcoal;
-
 }
 
-.localTrade:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-  transition: 300ms;
-}
-
-.bountifull {
-  height: 93%;
-  margin: 0 0;
-  padding: 0 0;
-  border-radius: 60px 60px;
-}
-
-.bountifull:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-  transition: 300ms;
-}
 
 .contactMe {
   height: 100vh;
@@ -195,7 +170,6 @@ a {
 }
 
 #technologyTitle {
-  // width: 90vw;
   margin: 0;
   padding: 1em;
   text-align: right;
@@ -206,7 +180,7 @@ a {
 }
 
 .technology {
-  display: flex; 
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0 5em;
@@ -214,17 +188,23 @@ a {
 
 .logo {
   height: 10em;
+  flex: 1;
   margin: 2em;
+}
+
+.logo:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.7s;
 }
 
 .logoSVG {
   height: 100%;
-  margin: 2.5em;
 }
 
 .logoSVGLong {
-  width: 70%;
-  height: 100%
+  flex: 2;
+  height: 60%;
 }
 
 .socialSection {
@@ -252,11 +232,7 @@ a {
   }
 }
 
-@media only screen   
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3){
-
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
   .Container {
     width: 100vw;
     padding: 0;
@@ -271,9 +247,7 @@ a {
 
   .App-header {
     height: 50vh;
-    // padding-top: 0;
   }
-  
 
   #myName {
     height: 50%;
@@ -284,12 +258,10 @@ a {
 
   #myWorkTitle {
     font-family: "Montserrat";
-    margin: 0;
-    padding: .5em;
+    margin-bottom: 1em;
+    padding: 0.5em;
     text-align: center;
     width: 90%;
-    // margin: auto;
-    // height:fit-content; 
     font-size: 40px;
     color: $white;
   }
@@ -298,86 +270,67 @@ a {
     height: 30%;
   }
 
-
   #technologyTitle {
     font-family: "Montserrat";
     margin: 0;
-    padding: .5em;
+    padding: 0.5em;
     text-align: center;
     width: 90%;
-    // margin: auto;
-    // height:fit-content; 
     font-size: 40px;
     color: $white;
   }
 
-
   #aboutMeTitle {
     font-family: "Montserrat";
     margin: 0;
-    padding: .5em;
+    padding: 0.5em;
     text-align: center;
-    width: 100%;
+    width: 90%;
     margin: auto;
-    // height:fit-content; 
     font-size: 40px;
     color: $charcoal;
   }
 
   .myPicture {
     height: 35%;
-    width:  50%;
+    width: 50%;
     margin: auto;
     margin-bottom: 1em;
   }
 
+  .myWork {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex: 1;
+  }
 
+  .projectTitle {
+    color: $charcoal;
+    font-size: 20px;
+  }
 
-.myWork {
-  // height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  flex: 1;
-  // align-items: center;
-  // justify-content: center;
-}
+  .localTrade {
+    height: 80%;
+    border-radius: 20px;
+  }
 
-.projectTitle {
-  color: $charcoal;
-  font-size: 20px;
-}
+  .localTradeBorder {
+    height: 50%;
+    min-width: 195px;
+    max-width: 500px;
+    max-height: 400px;
+    margin: 0.5em auto;
+    border-radius: 20px;
+  }
 
-.localTrade {
-  height: 50%;
-  // margin: 0;
-  margin: 1em;
-  border-radius: 20px;
-}
-
-.localTradeBorder {
-  height: 50%;
-  margin: 1em;
-  border-radius: 20px;
-  border: 1px solid $charcoal;
-}
-
-.localTradeImg{
-  height: 20px;
-}
-
-.bountifull {
-  height: 93%;
-  // margin: 0 0;
-  padding: 0 0;
-  border-radius: 60px 60px;
-}
-
+  .localTradeImg {
+    height: 20px;
+  }
 
   .aboutMeSection {
-    // padding: 1em;
     width: 100vw;
-    // height: 100vh;
     flex-direction: column;
     background-color: $blue;
   }
@@ -389,17 +342,21 @@ a {
     background-color: $blue;
     font-size: 18.5px;
     padding: 0;
-    margin: auto
+    margin: auto;
   }
 
   .logoSVG {
-    width: 70%;
+    max-width: 224px;
   }
-  
+
+  .logoSVGLong {
+    height: 40%;
+  }
+
   .contactMe {
-  height: 100vh;
-  background-color: $yellow;
-}
+    height: 100vh;
+    background-color: $yellow;
+  }
 
   #contactMeTitle {
     padding: 1em;
@@ -413,13 +370,4 @@ a {
   .socialIcon {
     height: 3em;
   }
- } 
-
-// @keyframes App-logo-spin {
-//   from {
-//     transform: rotate(0deg);
-//   }
-//   to {
-//     transform: rotate(360deg);
-//   }
-// }
+}

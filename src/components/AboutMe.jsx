@@ -6,19 +6,27 @@ const AboutMe = () => {
       <div className="aboutMeSection">
         <div className="aboutMeContent">
           <p>
-            I'm a Full Stack Developer with a passion for building appealing, and
-            stable mobile and web applications. I enjoy being involved in the
-            initial conceptualization of an app, and following through until
-            development, and delivery.
+            I'm an enthusiastic Full Stack Developer with a passion for building appealing and
+            stable mobile and web applications.
             </p>
+
+          <p>
+            I love being involved in the entire app lifecycle. Including
+            initial conceptualization and planning, development, 
+            and following through until
+            development and delivery.
+          </p>
           <p>
             Experienced in working in a team setting following Agile
-            methodology, requiring good communication, and time management
+            methodology requiring great communication and time management
             skills.
-            </p>
+          </p>
+          {/* <p>
+            I am a fast learner, and love learning new technologies and expanding my skillset.
+          </p> */}
           <p>
             When I am not developing, I enjoy vegetable gardening, hiking, and
-            creating new plant-based recipes.
+            creating plant-based recipes.
             </p>
         </div>
         <img src={myPicture} className="myPicture" alt="logo" />

@@ -11,11 +11,11 @@ function ContactForm() {
 
   return (
     <div className="contactSection">
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit} style={{boxShadow:'1px 1px 5px black'}}>
         {/* <label htmlFor="email">Email Address</label> */}
-        <input className='formInput' id="email" placeholder="Email" type="email" name="email" />
+        <input className='formInput' id="email" placeholder="Enter your email" type="email" name="email" />
         <ValidationError prefix="Email" field="email" errors={state.errors} />
-        <textarea className='formInput textarea' id="message" placeholder="Your message to me" name="message" />
+        <textarea className='formInput textarea' id="message" placeholder="Let's chat!" name="message" />
         <ValidationError
           prefix="Message"
           field="message"
@@ -23,7 +23,7 @@ function ContactForm() {
         />
         <div className="buttonContainer">
           <button className='submitButton' type="submit" disabled={state.submitting}>
-            SUBMIT
+            SEND
           </button>
         </div>
       </form>

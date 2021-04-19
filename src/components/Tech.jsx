@@ -20,53 +20,53 @@ import awss3 from "../assets/tech/aws-s3.svg";
 
 function Tech() {
   return (
-    <div title='technology' className='technology'>
+    <div className='technology'>
       {/* <h1 id='technologyTitle'>Technology</h1> */}
       {/* <div title="technology" className="technology"> */}
-        <div className="logo">
+      <div title="JavaScript"  className="logo">
           <img src={javascript} className="logoSVG" alt="JSLogo" />
         </div>
-        <div className="logo">
+        <div title="TypeScript" className="logo">
           <img src={typescript} className="logoSVG" alt="TSLogo" />
         </div>
-        <div className="logo">
+      <div title="CSS" className="logo">
           <img src={css} className="logoSVG" alt="CSSLogo" />
         </div>
-        <div className="logo">
+      <div title="HTML" className="logo">
           <img src={html} className="logoSVG" alt="HTMLLogo" />
         </div>
-        <div className="logo">
+      <div title="React" className="logo">
           <img src={reactSVG} className="logoSVG" alt="ReactLogo" />
         </div>
-        <div className="logo">
+      <div title="ReactNative!" className="logo">
           <img src={reactNative} className="logoSVG" alt="reactNativeLogo" />
         </div>
-        <div className="logo">
+      <div title="Git" className="logo">
           <img src={giticon} className="logoSVG" alt="giticon" />
         </div>
-        <div className="logo">
+      <div title="Github" className="logo">
           <img src={github} className="logoSVG" alt="github" />
         </div>
 
-        <div className="logo">
+      <div title="Node.js"  className="logo">
           <img src={nodejs} className="logoSVG" alt="nodejs" />
         </div>
-        <div className="logo">
+      <div title="Figma" className="logo">
           <img src={figma} className="logoSVG" alt="figma" />
         </div>
-        <div className="logo">
+      <div title="AWS S3" className="logo">
           <img src={awss3} className="logoSVG" alt="aws-s3" />
         </div>
-        <div className="logo">
+      <div title="Jest" className="logo">
           <img src={jest} className="logoSVG" alt="jest" />
         </div>
-        <div className="logo">
-          <img src={mongoDB} className="logoSVGLong" alt="mongoDB" />
-        </div>
-        <div className="logo">
+      <div title="PostgreSQL" className="logo">
           <img src={postgres} className="logoSVG" alt="postgres" />
         </div>
-        <div className="logo">
+      <div title="mongoDB" className="logo">
+          <img src={mongoDB} className="logoSVGLong" alt="mongoDB" />
+        </div>
+      <div title="Express" className="logo">
           <img src={express} className="logoSVGLong" alt="express" />
         </div>
       </div>

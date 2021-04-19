@@ -2,7 +2,6 @@ import githubSocial from "../assets/iconmonstr-github-3.svg";
 import linkedinSocial from "../assets/iconmonstr-linkedin-3.svg";
 import twitterSocial from "../assets/iconmonstr-twitter-3.svg";
 
-
 const Socials = () => {
   return (
     <div className="socialSection">
@@ -26,7 +25,7 @@ const Socials = () => {
         </a>
       </div>
       <div className="socialIcon">
-        <a href="#">
+        <a href="https://twitter.com/datas_learning">
           <img
             className="socialIcon"
             src={twitterSocial}
